@@ -1,0 +1,30 @@
+[project]
+name = "smctm"
+version = "0.1.0"
+description = "Experiments for Differentiable Plastic Recurrent Neural Networks: A Systematic Evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "array-api-compat>=1.4",
+    "gdown>=5.2.1",
+    "gymnasium>=1.2.2",
+    "hydra-core>=1.3.2",
+    "imageio[ffmpeg]>=2.37.2",
+    "matplotlib>=3.10.7",
+    "numpy>=2.2.6",
+    "omegaconf>=2.3.0",
+    "pillow>=11.0.0",
+    "pyyaml>=6.0.2",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
+    "scipy>=1.15.3",
+    "torch>=2.9.0",
+    "torchnet>=0.0.4",
+    "torchvision>=0.24.0",
+    "tqdm>=4.67.1",
+    "umap-learn>=0.5.9.post2",
+]
+
+[project.optional-dependencies]
+search = ["hydra-optuna-sweeper>=1.2.0"]
+wandb = ["wandb>=0.16.0"]

@@ -1,0 +1,10 @@
+# @package _global_
+
+model:
+  d_input: 256
+  d_model: 256
+  lmbda: 0.9
+  eta: 0.5
+  steps: 1
+  layer_norm: true
+  dropout: 0.0

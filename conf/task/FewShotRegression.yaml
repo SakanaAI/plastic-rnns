@@ -1,0 +1,18 @@
+# @package _global_
+
+task:
+  n_var: 12             # 12 for linear, 6 for mlp (override via CLI)
+  train_length: 20
+  test_length: 20
+  input_noise: 0.1
+  task_mode: linear    # 'linear' or 'mlp'
+  dataset_size: 10000
+training:
+  epochs: 500
+  batch_size: 64
+  learning_rate: 0.001
+  learn_rate_scheduler: none
+  max_grad_norm: 5
+evaluation:
+  episodes: 5
+  evaluation_interval: 5

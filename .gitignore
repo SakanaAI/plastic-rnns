@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Data and results
+data/
+outputs/
+.vscode/
+
+analysis/**/experiment_dirs.yaml
+
+*.gif
+/.claude
+references/
+
+# Local credentials and experiment artifacts
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pt
+*.pth
+*.ckpt
+wandb/
+multirun/
+.pytest_cache/
+.ruff_cache/

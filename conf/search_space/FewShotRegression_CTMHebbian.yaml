@@ -1,0 +1,9 @@
+# @package _global_
+
+model:
+  nlm_init_identity: true
+
+hydra:
+  sweeper:
+    params:
+      training.learning_rate: interval(1e-4, 1e-2)

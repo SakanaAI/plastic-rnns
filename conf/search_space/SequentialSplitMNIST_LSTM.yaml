@@ -1,0 +1,10 @@
+# @package _global_
+
+training:
+  epochs: 500
+
+hydra:
+  sweeper:
+    params:
+      training.learning_rate: interval(1e-4, 1e-3)
+      model.dropout: interval(0, 0.5)

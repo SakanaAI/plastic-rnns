@@ -1,0 +1,25 @@
+defaults:
+  - base
+  - _self_
+  - search_space: ${task}_${model}
+  - override hydra/sweeper: optuna
+
+training:
+  epochs: 20
+
+# Hydra config
+hydra:
+  sweep:
+    dir: ./outputs/${hydra.runtime.choices.task}/${hydra.runtime.choices.model}/search/${now:%m-%d_%H-%M-%S}
+  sweeper:
+    study_name: ${hydra.runtime.choices.task}_${hydra.runtime.choices.model}
+    storage: null
+    direction: maximize
+    n_trials: 20
+    n_jobs: 1
+    sampler:
+      _target_: optuna.samplers.TPESampler  # Tree-structured Parzen estimator
+      n_startup_trials: 10  # Number of random samples before running the TPE algorithm
+      n_ei_candidates: 24  # Number of candidate samples used to calculate the expected improvement
+      multivariate: true
+      warn_independent_sampling: false

@@ -1,0 +1,7 @@
+# @package hydra.sweeper
+
+params:
+  training.learning_rate: tag(log, interval(1e-4, 3e-3))
+  model.temperature: tag(log, interval(0.1, 10.0))
+  training.weight_decay: choice(0.0, 1e-6, 1e-5, 1e-4)
+

@@ -1,0 +1,48 @@
+defaults:
+  - _self_
+  - task: Copy
+  - model: CTM
+
+# General options
+device: 0
+seed: 42
+
+# Training hyperparameters
+training:
+  epochs: 40
+  batch_size: 512
+  learning_rate: 5e-3
+  learn_rate_scheduler: cosine_annealing
+  learn_rate_scheduler_final_factor: 1.0
+  max_grad_norm: 1
+  weight_decay: 0.0
+  compile: false
+
+# Evaluation hyperparameters
+evaluation:
+  episodes: 5
+  evaluation_interval: 50
+
+# Logging hyperparameters
+logging:
+  plot_interval: 10
+  wandb:
+    enabled: false
+    project: "smctm"
+    entity: null
+    tags: []
+
+# Checkpoint hyperparameters
+checkpoint:
+  enabled: false
+  checkpoint_every: 10
+  resume_from: null
+
+# Hydra configuration
+hydra:
+  job:
+    chdir: true  # Change working directory to output directory (default behaviour for Hydra < 1.2)
+  run:
+    dir: ./outputs/${hydra.runtime.choices.task}/${hydra.runtime.choices.model}/${now:%m-%d_%H-%M-%S}  # Timestamp experiments up to second precision
+  sweep:
+    dir: ./outputs/${hydra.runtime.choices.task}/${hydra.runtime.choices.model}/multirun/${now:%m-%d_%H-%M-%S.%f}

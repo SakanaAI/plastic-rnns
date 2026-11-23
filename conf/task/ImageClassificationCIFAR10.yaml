@@ -1,0 +1,23 @@
+# @package _global_
+
+task:
+  dataset: CIFAR10
+  out_dims: 10
+  iterations: 10
+  backbone_dim: 64
+  backbone_layers: 3
+
+model:
+  d_model: 128
+
+evaluation:
+  evaluation_interval: 10
+
+training:
+  epochs: 500
+  batch_size: 128
+  learning_rate: 3e-4
+  max_grad_norm: 1
+  weight_decay: 1e-4
+  learn_rate_scheduler: cosine_annealing
+  learn_rate_scheduler_final_factor: 0.01

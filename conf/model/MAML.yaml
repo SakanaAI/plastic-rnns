@@ -1,0 +1,14 @@
+# @package _global_
+
+# Finn et al. (2017) MiniImageNet defaults: Conv4-32, five full-model inner
+# updates with step size 0.01, and a meta-batch of four episodes.
+model:
+  hidden_channels: 32
+  inner_learning_rate: 0.01
+  inner_steps: 5
+  first_order: false
+
+training:
+  batch_size: 4
+  learning_rate: 1e-3
+

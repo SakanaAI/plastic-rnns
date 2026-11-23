@@ -1,0 +1,4 @@
+# Replace placeholders with your multirun directories, containing numbered seed runs.
+maze_exploration:
+  PlasticCTM: outputs/MazeExploration/CTM/multirun/<run>
+  PlasticCTMNoDynamicRescaling: outputs/MazeExploration/PlasticCTMNoDynamicRescaling/multirun/<run>

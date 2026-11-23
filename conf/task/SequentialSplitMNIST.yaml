@@ -1,0 +1,14 @@
+# @package _global_
+
+# 25 images: A support, A query, B support, A retention, B query.
+task:
+  dataset_mode: split_mnist
+  out_dims: 5
+  iterations: 1
+  n_exemplars_per_class: 1
+  queries_per_loss: 5
+
+training:
+  epochs: 1000
+  batch_size: 64
+  max_grad_norm: 10

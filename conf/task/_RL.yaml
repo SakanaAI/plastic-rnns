@@ -1,0 +1,26 @@
+# @package _global_
+
+
+task:
+  out_dims: -1
+  partially_observed: true
+training:
+  epochs: 300
+  batch_size: 64
+  num_envs: 4
+  replay_size: 4096
+  seq_len: 32
+  discount: 0.99
+  trace_decay: 0.95
+  ppo_epochs: 4
+  ppo_clip_range: 0.2
+  vf_coeff: 0.25
+  entropy_coeff: 0.01
+  kl_threshold: 0.03
+  max_grad_norm: 5
+evaluation:
+  episodes: 10
+  evaluation_interval: 10
+  render_interval: 25
+  render_envs: 4  # How many envs to include when saving a render (kept small to avoid huge grids)
+  render_max_frames: 1000  # Cap number of frames captured during a render to prevent memory blow-ups

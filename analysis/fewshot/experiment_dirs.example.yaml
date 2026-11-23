@@ -1,0 +1,5 @@
+# Replace placeholders with your multirun directories, containing numbered seed runs.
+fewshot_cifar:
+  PlasticCTM: outputs/FewShotCIFAR/CTM/multirun/<run>
+fewshot_miniimagenet:
+  PlasticCTM: outputs/FewShotMiniImageNet/CTM/multirun/<run>

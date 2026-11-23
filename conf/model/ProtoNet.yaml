@@ -1,0 +1,14 @@
+# @package _global_
+
+# Snell et al. (2017) Conv4 defaults. Temperature=1 recovers unscaled negative
+# squared-Euclidean logits from the reference implementation.
+model:
+  hidden_channels: 64
+  temperature: 1.0
+
+# Batched episodes improve throughput; each episode still constructs and uses
+# only its own support-set prototypes.
+training:
+  batch_size: 32
+  learning_rate: 1e-3
+

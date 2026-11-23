@@ -1,0 +1,32 @@
+# Replace placeholders with your multirun directories, containing numbered seed runs.
+models:
+- name: RNN
+  directory: outputs/SequentialSplitMNIST/RNN/multirun/<rnn-run>
+- name: Plastic RNN
+  directory: outputs/SequentialSplitMNIST/PlasticRNN/multirun/<plastic-rnn-run>
+- name: Plastic RNN (Oja)
+  directory: outputs/SequentialSplitMNIST/PlasticRNN/multirun/<plastic-rnn-oja-run>
+- name: LSTM
+  directory: outputs/SequentialSplitMNIST/LSTM/multirun/<lstm-run>
+- name: Plastic LSTM (No Mod.)
+  directory: outputs/SequentialSplitMNIST/PlasticLSTM/multirun/<plastic-lstm-no-mod-run>
+- name: Plastic LSTM (Simple Mod.)
+  directory: outputs/SequentialSplitMNIST/PlasticLSTM/multirun/<plastic-lstm-simple-mod-run>
+- name: Plastic LSTM (Retro. Mod.)
+  directory: outputs/SequentialSplitMNIST/PlasticLSTM/multirun/<plastic-lstm-retro-mod-run>
+- name: HyperLSTM
+  directory: outputs/SequentialSplitMNIST/HyperLSTM/multirun/<hyperlstm-run>
+- name: STPN
+  directory: outputs/SequentialSplitMNIST/STPN/multirun/<stpn-run>
+- name: FW
+  directory: outputs/SequentialSplitMNIST/FW/multirun/<fw-run>
+- name: GDN
+  directory: outputs/SequentialSplitMNIST/GDN/multirun/<gdn-run>
+- name: CTM
+  directory: outputs/SequentialSplitMNIST/CTM/multirun/<ctm-run>
+- name: Plastic CTM (No NLMs)
+  directory: outputs/SequentialSplitMNIST/CTMNoNLMs/multirun/<plastic-ctm-no-nlms-run>
+- name: Plastic CTM (Hebbian)
+  directory: outputs/SequentialSplitMNIST/CTMHebbian/multirun/<plastic-ctm-hebbian-run>
+- name: Plastic CTM (Ours)
+  directory: outputs/SequentialSplitMNIST/CTM/multirun/<plastic-ctm-ours-run>

@@ -1,0 +1,9 @@
+# Replace placeholders with your multirun directories, containing numbered seed runs.
+linear_k10:
+  PlasticCTM: outputs/FewShotRegression/CTM/multirun/<linear_k10-run>
+linear_k20:
+  PlasticCTM: outputs/FewShotRegression/CTM/multirun/<linear_k20-run>
+mlp_k10:
+  PlasticCTM: outputs/FewShotRegression/CTM/multirun/<mlp_k10-run>
+mlp_k20:
+  PlasticCTM: outputs/FewShotRegression/CTM/multirun/<mlp_k20-run>

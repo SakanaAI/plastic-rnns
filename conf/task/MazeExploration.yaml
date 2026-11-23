@@ -1,0 +1,31 @@
+# @package _global_
+defaults:
+  - _RL
+  - _self_
+
+seed: 123
+task:
+  type: MazeExploration
+  max_episode_steps: 200  # 250 for "Differentiable plasticity", 200 for "Backpropamine"
+  maze_size: 11  # Must be an odd number (e.g., 5, 7, 9, 11). Determines the grid size and pillar placement.
+model:
+  d_model: 128
+  d_input: 128
+training:
+  epochs: 20000
+  batch_size: ${training.num_envs}  # Training occurs on data from all envs simultaneously in one go (i.e., one whole batch per PPO epoch)
+  learning_rate: 0.003
+  num_envs: 1024
+  replay_size: ${task.max_episode_steps}  # 1e6 episodes for "Differentiable plasticity", 1e5 for "Backpropamine"
+  seq_len: ${task.max_episode_steps}  # Backpropagate through entire episode
+  ppo_clip_range: 0.25
+  vf_coeff: 0.1
+  entropy_coeff: 0.01
+  kl_threshold: 0.03
+  max_grad_norm: 5.0
+  popart_step_size: 0.001  # PopArt beta parameter for adaptive normalization
+evaluation:
+  evaluation_interval: 50
+  render_interval: 2500
+  render_envs: 4
+  render_max_frames: ${task.max_episode_steps}

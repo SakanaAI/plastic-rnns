@@ -1,0 +1,5 @@
+# @package hydra.sweeper
+
+params:
+  model.dropout: interval(0, 0.4)
+  training.learning_rate: tag(log, interval(1e-4, 1e-2))
